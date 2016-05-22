@@ -15,7 +15,7 @@ Some plugins require admin permissions. You can set an admin in permissions.conf
 You can get your user id number by sending the following query to the bot
 
 ```
-!tginfo id
+/tginfo id
 ```
 
 ### Installation
@@ -38,7 +38,7 @@ To install the bot, run the following in telex directory.
 
 To start the bot, run the following in telex directory.
 
-    ./launch
+    python runner.py
 
 ### Running telex as a service
 
