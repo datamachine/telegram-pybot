@@ -33,6 +33,17 @@ Steps:
 To install the bot, run the following in telex directory.
 
     ./launch.sh install
+  
+#### Manual installation if script hangs somehow
+Enter virtalenv with
+    `source .virtualenv/bin/activate`
+    
+Get requirements
+    `pip install -r requirements.txt`
+    
+Put in bot token in `telex.conf.example` and rename it to `telex.conf`
+    
+Put in your user id in `permissions.conf.example` and rename to `permissions.conf`
 
 #### Running telex
 
