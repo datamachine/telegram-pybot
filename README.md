@@ -15,30 +15,38 @@ Some plugins require admin permissions. You can set an admin in permissions.conf
 You can get your user id number by sending the following query to the bot
 
 ```
-!tginfo id
+/tginfo id
 ```
 
 ### Installation
 Steps:
 1: Clone git repository.
+2: Edit configuration files.
+3. Create and activate virtualenv.
 2: Install dependencies
-3: Install telex
 5: Run telex
 
 #### Cloning the repository
 
     git clone --recursive https://github.com/datamachine/telex.git && cd telex
 
-#### Installing telex
-To install the bot, run the following in telex directory.
+#### Setting up configuration
+Put in bot token in `telex.conf.example` and rename it to `telex.conf`
+    
+Put in your user id in `permissions.conf.example` and rename to `permissions.conf`
 
-    ./launch.sh install
+#### Creating and activating virtualenv
+    virtualenv -p python3 .virtualenv
+    source .virtualenv/bin/activate
+
+#### Installing dependencies
+    pip install -r requirements.txt
 
 #### Running telex
 
-To start the bot, run the following in telex directory.
+To start the bot, run the following in telex directory. Be sure to be inside your virtualenv.
 
-    ./launch
+    python runner.py
 
 ### Running telex as a service
 
